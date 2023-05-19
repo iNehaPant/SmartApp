@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  VSmart
+
+  Created by Neha-NewOS on 11/05/2023.
+  
+*/
+
+"noInternet" = "No Internet";
+"ok" = "OK";
+"users" = "Users";
+"followers"  = "Followers";
+"following" = "Following";
