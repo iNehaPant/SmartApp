@@ -6,17 +6,17 @@
 //
 
 import Foundation
-import Alamofire
 import Combine
-@testable import VSmart
+import Alamofire
+@testable import SmartApp
 
 
 class MockNetworkManager: Network {
     var mockUsers: [User]
     var mockUserDetails: UserDetails
 
-    init(mockUsers: [User] = [],
-         mockUserDetails: UserDetails = UserDetails(id: 0, login: "", avatar_url: "", name: "", location: "", public_repos: 0, followers: 1, following: 1)) {
+    init(mockUsers: [User] = [User(id: 1, login: "Neha", avatar_url: "Neha")],
+         mockUserDetails: UserDetails = UserDetails(id: 0, login: "Neha", avatar_url: "Neha", name: "Neha", location: "Neha", public_repos: 0, followers: 1, following: 1)) {
         self.mockUsers = mockUsers
         self.mockUserDetails = mockUserDetails
     }

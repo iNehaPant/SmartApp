@@ -23,10 +23,13 @@
 		8778E6372A1831AA0061FD1F /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778E6352A1831AA0061FD1F /* UserDetails.swift */; };
 		8778E6382A1831AA0061FD1F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778E6362A1831AA0061FD1F /* User.swift */; };
 		8778E63A2A1831CF0061FD1F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8778E6392A1831CF0061FD1F /* Localizable.strings */; };
-		8778E63C2A1831FA0061FD1F /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778E63B2A1831FA0061FD1F /* MockNetworkManager.swift */; };
 		8778E63E2A1832020061FD1F /* UserViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8778E63D2A1832020061FD1F /* UserViewModelTests.swift */; };
 		8778E6412A1832A60061FD1F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8778E6402A1832A60061FD1F /* Alamofire */; };
 		8778E6442A1832C80061FD1F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 8778E6432A1832C80061FD1F /* SDWebImageSwiftUI */; };
+		87C491022A38AD890029C8D5 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C491012A38AD890029C8D5 /* MockURLProtocol.swift */; };
+		87C491052A38B3780029C8D5 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 87C491042A38B3780029C8D5 /* SDWebImageSwiftUI */; };
+		87C491072A38B43F0029C8D5 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C491062A38B43F0029C8D5 /* MockNetworkManager.swift */; };
+		87C491092A38B63E0029C8D5 /* UserDetailsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87C491082A38B63E0029C8D5 /* UserDetailsViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,8 +69,10 @@
 		8778E6352A1831AA0061FD1F /* UserDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		8778E6362A1831AA0061FD1F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		8778E6392A1831CF0061FD1F /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
-		8778E63B2A1831FA0061FD1F /* MockNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		8778E63D2A1832020061FD1F /* UserViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModelTests.swift; sourceTree = "<group>"; };
+		87C491012A38AD890029C8D5 /* MockURLProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
+		87C491062A38B43F0029C8D5 /* MockNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
+		87C491082A38B63E0029C8D5 /* UserDetailsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailsViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87C491052A38B3780029C8D5 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +110,7 @@
 				8778E6082A1831770061FD1F /* SmartAppTests */,
 				8778E6122A1831770061FD1F /* SmartAppUITests */,
 				8778E5F62A1831740061FD1F /* Products */,
+				87C491032A38B3780029C8D5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -144,9 +151,11 @@
 		8778E6082A1831770061FD1F /* SmartAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				87C491062A38B43F0029C8D5 /* MockNetworkManager.swift */,
 				8778E63D2A1832020061FD1F /* UserViewModelTests.swift */,
-				8778E63B2A1831FA0061FD1F /* MockNetworkManager.swift */,
+				87C491012A38AD890029C8D5 /* MockURLProtocol.swift */,
 				8778E6092A1831770061FD1F /* SmartAppTests.swift */,
+				87C491082A38B63E0029C8D5 /* UserDetailsViewModelTests.swift */,
 			);
 			path = SmartAppTests;
 			sourceTree = "<group>";
@@ -204,6 +213,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		87C491032A38B3780029C8D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -242,6 +258,9 @@
 				8778E6072A1831770061FD1F /* PBXTargetDependency */,
 			);
 			name = SmartAppTests;
+			packageProductDependencies = (
+				87C491042A38B3780029C8D5 /* SDWebImageSwiftUI */,
+			);
 			productName = SmartAppTests;
 			productReference = 8778E6052A1831770061FD1F /* SmartAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -360,9 +379,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8778E63C2A1831FA0061FD1F /* MockNetworkManager.swift in Sources */,
 				8778E63E2A1832020061FD1F /* UserViewModelTests.swift in Sources */,
 				8778E60A2A1831770061FD1F /* SmartAppTests.swift in Sources */,
+				87C491092A38B63E0029C8D5 /* UserDetailsViewModelTests.swift in Sources */,
+				87C491072A38B43F0029C8D5 /* MockNetworkManager.swift in Sources */,
+				87C491022A38AD890029C8D5 /* MockURLProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +727,11 @@
 			productName = Alamofire;
 		};
 		8778E6432A1832C80061FD1F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8778E6422A1832C80061FD1F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		87C491042A38B3780029C8D5 /* SDWebImageSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 8778E6422A1832C80061FD1F /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;

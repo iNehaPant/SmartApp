@@ -10,8 +10,7 @@ import XCTest
 import XCTest
 import Combine
 import Alamofire
-
-@testable import VSmart
+@testable import SmartApp
 
 
 final class UsersViewModelTests: XCTestCase {
@@ -33,27 +32,20 @@ final class UsersViewModelTests: XCTestCase {
 
     func testFetchUserData() {
         // Given
-        let expectedUsers = [User(id: 1, login: "Neha", avatar_url: "Neha"), User(id: 2, login: "Neha1", avatar_url: "Neha1")]
-        mockNetworkManager.mockUsers = expectedUsers
+        let expectedUsers = [User(id: 1, login: "Neha", avatar_url: "Neha")]
+
         let expectation = self.expectation(description: "fetchUserData")
 
         // When
-        sut.networkManager.fetchUserData()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-                switch completion {
-                case .failure(let error):
-                    XCTFail("Failed with error: \(error.localizedDescription)")
-                case .finished:
-                    expectation.fulfill()
-                }
-            }, receiveValue: { users in
-                guard let login = users.first?.login else {return}
-                    XCTAssertEqual(login, "Neha")
-            })
-            .store(in: &cancellables)
+        sut.fetchUserData()
+
+        DispatchQueue.main.async {
+            XCTAssertEqual(self.sut.users, expectedUsers)
+            expectation.fulfill()
+        }
 
         // Then
         self.wait(for: [expectation], timeout: 1.0)
     }
 }
+

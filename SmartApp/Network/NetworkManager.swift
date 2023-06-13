@@ -17,7 +17,7 @@ protocol Network {
 }
 
 struct NetworkManager: Network {
-
+    
     func fetchUserData() -> AnyPublisher<[User], AFError> {
        let url = URL(string: baseUrl)!
        return AF.request(url, method: .get)
